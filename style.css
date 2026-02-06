@@ -1,8 +1,14 @@
 /* CSS By Amanda Kerr */
 
+/* ------------------------------------------------------ */
+/*  GOOGLE FONTS                                          */
+/* ------------------------------------------------------ */
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 
-/* --- CSS RESET --- */
+
+/* ------------------------------------------------------ */
+/*  CSS RESET                                             */
+/* ------------------------------------------------------ */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -16,39 +22,46 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
 
-/* --- CUSTOM STYLES START HERE --- */
-/* Root Variables */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+
+/* ------------------------------------------------------ */
+/*  ROOT VARIABLES                                        */
+/* ------------------------------------------------------ */
 :root {
   --midnight-blue: #1f2a44;
   --olive-green: #76885b;
@@ -58,74 +71,76 @@ table {
   --soft-white: #faf9f6;
 }
 
-/* Global Styles */
 
-/* Header Styles */
+/* ------------------------------------------------------ */
+/*  GLOBAL TYPOGRAPHY                                     */
+/* ------------------------------------------------------ */
+h1, h2, h3, h4, p, a, li {
+  font-family: "Playfair Display", serif;
+}
 
 
+/* ------------------------------------------------------ */
+/*  HEADER                                                */
+/* ------------------------------------------------------ */
 header {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
   background-color: var(--midnight-blue);
-  padding: 24px 48px;
+  padding: 24px 32px;
   text-align: center;
   color: var(--soft-white);
-  width: 900px;
-  margin: 0 auto;
 }
 
 .logo {
   width: 150px;
-  height: auto;
-  margin: 0  auto 24px;
+  margin: 0 auto 24px;
   display: block;
 }
 
 h1 {
-  font-family: "Playfair Display", serif;
   font-size: 56px;
-  letter-spacing: 0.5px;
   margin: 8px 0 4px;
-  color: var(--soft-white);
 }
 
 h2 {
-  font-family: "Playfair Display", serif;
   font-size: 40px;
   font-weight: 300;
-  margin: 0;
-  color: var(--soft-white);
 }
 
-/* Navigation Styles */
 
+/* ------------------------------------------------------ */
+/*  NAVIGATION                                            */
+/* ------------------------------------------------------ */
 nav {
-  background-color: var(--champagne-gold);
-  padding: 8px 48px;
-  text-align: center;
-  width: 900px;
+  width: 100%;
+  max-width: 900px;
   margin: 0 auto;
+  background-color: var(--champagne-gold);
+  padding: 8px 32px;
+  text-align: center;
 }
+
 nav ul {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  justify-content: center;
   gap: 40px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 nav a {
   text-decoration: none;
   color: var(--dark-charcoal);
   font-weight: bold;
-  font-family: "Playfair Display", serif;
   font-size: 24px;
 }
 
-/* Main Sections */
+
+/* ------------------------------------------------------ */
+/*  MAIN SECTIONS                                         */
+/* ------------------------------------------------------ */
 main section {
   margin: auto;
-  max-width: 900px;
 }
 
 h3 {
@@ -134,15 +149,22 @@ h3 {
   text-align: center;
 }
 
-/* About Section */
 
+/* ------------------------------------------------------ */
+/*  ABOUT SECTION                                         */
+/* ------------------------------------------------------ */
 #about {
-  margin: 0 auto;
   max-width: 800px;
+  margin: 0 auto;
   padding-top: 40px;
-  text-align: left;
   padding-bottom: 32px;
+  text-align: left;
   border-bottom: 2px solid var(--champagne-gold);
+}
+
+#about h2 {
+  text-align: left;
+  color: var(--dark-charcoal);
 }
 
 #about p {
@@ -150,41 +172,37 @@ h3 {
   margin-top: 24px;
   line-height: 1.6;
   color: var(--dark-charcoal);
-  font-family: "Playfair Display", serif;
 }
 
-#about h2 {
-  text-align: left;
-  font-family: "Playfair Display", serif;
-  color: var(--dark-charcoal);
 
-}
-
-/* Offerings — Grid Layout */
-
+/* ------------------------------------------------------ */
+/*  OFFERINGS SECTION                                     */
+/* ------------------------------------------------------ */
 #offerings {
   max-width: 800px;
+  margin: 0 auto;
+  padding-top: 40px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 8px;
-  margin: 0 auto;
-  text-align: left;
-  padding-top: 40px;
-}
-
-/* Offering Card Styling */
-.offering-card {
-  background: var(--olive-green);
-  border-radius: 0.75rem;
-  padding: 1.5rem;
-  margin: 0;
   text-align: left;
 }
 
 #offerings > h3 {
+  grid-column: 1 / -1;
   margin-bottom: 24px;
-  grid-column: 1/-1; /* Make heading span full width */
   text-align: left;
+}
+
+.offering-card {
+  background: var(--olive-green);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.offering-card:nth-of-type(3) {
+  grid-column: 1 / -1;
 }
 
 .offering-card h4 {
@@ -193,49 +211,32 @@ h3 {
   color: var(--soft-white);
 }
 
-.offering-card p, .offering-card ul {
+.offering-card p,
+.offering-card ul {
   font-size: 16px;
-  line-height: 1;
+  line-height: 1.6;
   color: var(--soft-white);
 }
 
-/* Tablet breakpoint — two columns */
-@media (min-width: 600px) {
-  #offerings {
-    grid-template-columns: repeat(2, 1fr);
-  }
 
-  /* Third card spans full width */
-  #offerings .offering-card:nth-of-type(3) {
-    grid-column: 1 / -1;
-  }
+/* ------------------------------------------------------ */
+/*  GOLD DIVIDER                                          */
+/* ------------------------------------------------------ */
+.section-divider-gold {
+  width: 100%;
+  height: 4px;
+  background-color: var(--champagne-gold);
+  margin: 3rem 0;
 }
 
-/* Desktop refinement */
-@media (min-width: 900px) {
-  #offerings {
-    gap: 3rem;
-  }
 
-  .offering-card {
-    padding: 2rem;
-  }
-}
-
-/* Large desktop refinement */
-@media (min-width: 1200px) {
-  #offerings {
-    max-width: 1100px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-/* GALLERY */
+/* ------------------------------------------------------ */
+/*  GALLERY SECTION                                       */
+/* ------------------------------------------------------ */
 #gallery {
-  max-width: 1100px;
-  margin: 3em auto;
-  padding: 2em;
+  max-width: 800px;
+  margin: 4rem auto;
+  padding: 2rem 1rem;
   text-align: center;
 }
 
@@ -246,50 +247,45 @@ h3 {
 
 .gallery-intro {
   max-width: 750px;
-  margin: 0 auto 2.5em;
+  margin: 0 auto 3rem;
   font-size: 1.15rem;
   line-height: 1.7;
 }
 
-/* GRID */
 .gallery-img {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 24px;
-  margin-bottom: 40px;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  margin-bottom: 48px;
 }
 
-/* added a card box style around image+caption */
 .gallery-card {
   background: var(--linen);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  height: auto;
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
 }
 
 .gallery-card img {
- width: 100%;
- display: block;
- border-top-left-radius: 10px;
+  width: 100%;
+  display: block;
+  border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
 
 .gallery-card figcaption {
   text-align: center;
-  font-family: "Playfair Display", serif;
   font-size: 16px;
   line-height: 1.5;
   color: var(--dark-charcoal);
   padding: 8px;
 }
 
-.gallery-img figure {
-  text-align: left;
-}
 
-/* BUTTON */
+/* ------------------------------------------------------ */
+/*  BUTTON                                                */
+/* ------------------------------------------------------ */
 .gallery-button-wrapper {
   text-align: center;
 }
@@ -310,7 +306,10 @@ h3 {
   background: var(--olive-green-dark);
 }
 
-/* Footer Styles */
+
+/* ------------------------------------------------------ */
+/*  FOOTER                                                */
+/* ------------------------------------------------------ */
 footer {
   text-align: center;
   margin-top: 4rem;
@@ -331,4 +330,77 @@ footer .social a {
   text-decoration: none;
   color: #3a2f1b;
   font-weight: bold;
+}
+
+
+/* ------------------------------------------------------ */
+/*  MEDIA QUERIES                                         */
+/* ------------------------------------------------------ */
+
+/* TABLET — 600px */
+@media (min-width: 600px) {
+
+  header,
+  nav {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  #offerings {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  #offerings .offering-card:nth-of-type(3) {
+    grid-column: 1 / -1;
+  }
+
+  .gallery-img {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+}
+
+/* Large Tablet / Small Desktop — 750px: 3 columns */
+ @media (min-width: 750px) { 
+.gallery-img { 
+grid-template-columns: repeat(3, 1fr); 
+gap: 28px; } 
+}
+
+/* DESKTOP — 900px */
+@media (min-width: 900px) {
+
+  header,
+  nav {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+
+  #offerings {
+    gap: 2rem;
+  }
+
+  .offering-card {
+    padding: 2rem;
+  }
+
+  .gallery-img {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 32px;
+  }
+}
+
+
+/* XL DESKTOP — 1200px */
+@media (min-width: 1200px) {
+
+  #offerings {
+    max-width: 1100px;
+  }
+
+  .gallery-img {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 36px;
+  }
 }
