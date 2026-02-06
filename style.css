@@ -340,7 +340,7 @@ footer .social a {
 /* ------------------------------------------------------ */
 
 /* TABLET — 600px */
-@media (min-width: 600px) {
+@media (max-width: 600px) {
 
   header,
   nav {
