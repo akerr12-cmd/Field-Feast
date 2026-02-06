@@ -152,10 +152,10 @@ h3 {
 
 
 /* ------------------------------------------------------ */
-/*  ABOUT SECTION (800px)                                 */
+/*  ABOUT SECTION (900px)                                 */
 /* ------------------------------------------------------ */
 #about {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
   padding-top: 40px;
   padding-bottom: 32px;
@@ -180,7 +180,7 @@ h3 {
 /*  OFFERINGS SECTION (800px)                             */
 /* ------------------------------------------------------ */
 #offerings {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
   padding-top: 40px;
   display: grid;
@@ -235,7 +235,7 @@ h3 {
 /*  GALLERY SECTION (800px)                               */
 /* ------------------------------------------------------ */
 #gallery {
-  max-width: 800px;
+  max-width: 900px;
   margin: 4rem auto;
   padding: 2rem 1rem;
   text-align: center;
@@ -356,6 +356,11 @@ footer .social a {
   .gallery-img {
     grid-template-columns: repeat(2, 1fr);
     gap: 28px;
+  }
+
+  .inner-mobile {
+    max-width: 480px;
+    margin: 0 auto;
   }
 }
 
