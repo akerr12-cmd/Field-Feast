@@ -79,17 +79,17 @@ header {
   display: block;
 }
 
-header h1 {
+h1 {
   font-family: "Playfair Display", serif;
-  font-size: 40px;
+  font-size: 56px;
   letter-spacing: 0.5px;
   margin: 8px 0 4px;
   color: var(--soft-white);
 }
 
-header h2 {
+h2 {
   font-family: "Playfair Display", serif;
-  font-size: 16px;
+  font-size: 40px;
   font-weight: 300;
   margin: 0;
   color: var(--soft-white);
@@ -124,28 +124,51 @@ nav a {
 
 /* Main Sections */
 main section {
-  margin: 4rem auto;
+  margin: auto;
   max-width: 900px;
 }
 
 h3 {
-  font-size: 1.8rem;
+  font-size: 48px;
   margin-bottom: 1rem;
   text-align: center;
 }
 
 /* About Section */
+
+#about {
+  margin: o auto;
+  max-width: 800px;
+  padding-top: 40px;
+  text-align: left;
+  padding-bottom: 32px;
+  border-bottom: 2px solid var(--champagne-gold);
+}
+
 #about p {
-  font-size: 1.1rem;
-  margin-top: 1rem;
+  font-size: 16px;
+  margin-top: 24px;
+  line-height: 1.6;
+  color: var(--dark-charcoal);
+  font-family: "Playfair Display", serif;
+}
+
+#about h2 {
+  text-align: left;
+  font-family: "Playfair Display", serif;
+  color: var(--dark-charcoal);
+
 }
 
 /* Offerings — Grid Layout */
 
 #offerings {
+  max-width: 800px;
   display: grid;
   gap: 2rem;
-  margin-top: 2rem;
+  margin: 0 auto;
+  text-align: left;
+  padding-top: 40px;
 }
 
 /* Offering Card Styling */
