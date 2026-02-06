@@ -1,26 +1,54 @@
 /* CSS By Amanda Kerr */
 
-/* --- GOOGLE FONT --- */
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 
-/* --- CSS RESET (lean + modern) --- */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* --- CSS RESET --- */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
-html, body {
-  font-size: 100%;
-  line-height: 1;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-}
-
-/* --- ROOT VARIABLES --- */
+/* --- CUSTOM STYLES START HERE --- */
+/* Root Variables */
 :root {
   --midnight-blue: #1f2a44;
   --olive-green: #76885b;
@@ -30,43 +58,71 @@ img {
   --soft-white: #faf9f6;
 }
 
-/* --- HEADER --- */
+/* Global Styles */
+
+/* Header Styles */
+
+
 header {
+  background-color: var(--midnight-blue);
+  padding: 24px 48px;
   text-align: center;
-  padding: 3rem 0 2rem;
+  color: var(--soft-white);
+  width: 900px;
+  margin: 0 auto;
 }
 
 .logo {
-  width: 140px;
-  margin-bottom: 1rem;
+  width: 150px;
+  height: auto;
+  margin: 0  auto 24px;
+  display: block;
 }
 
 header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.25rem;
+  font-family: "Playfair Display", serif;
+  font-size: 40px;
+  letter-spacing: 0.5px;
+  margin: 8px 0 4px;
+  color: var(--soft-white);
 }
 
 header h2 {
-  font-size: 1.2rem;
-  font-weight: normal;
-  color: #6b5c3b;
+  font-family: "Playfair Display", serif;
+  font-size: 16px;
+  font-weight: 300;
+  margin: 0;
+  color: var(--soft-white);
 }
 
-/* --- NAVIGATION --- */
+/* Navigation Styles */
+
+nav {
+  background-color: var(--champagne-gold);
+  padding: 8px 48px;
+  text-align: center;
+  width: 900px;
+  margin: 0 auto;
+}
 nav ul {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   justify-content: center;
-  gap: 2rem;
-  margin: 2rem 0;
+  gap: 40px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 nav a {
   text-decoration: none;
-  color: #3a2f1b;
+  color: var(--dark-charcoal);
   font-weight: bold;
+  font-family: "Playfair Display", serif;
+  font-size: 24px;
 }
 
-/* --- MAIN SECTIONS --- */
+/* Main Sections */
 main section {
   margin: 4rem auto;
   max-width: 900px;
@@ -78,29 +134,31 @@ h3 {
   text-align: center;
 }
 
-/* --- ABOUT --- */
+/* About Section */
 #about p {
   font-size: 1.1rem;
   margin-top: 1rem;
 }
 
-/* --- OFFERINGS GRID --- */
+/* Offerings — Grid Layout */
+
 #offerings {
   display: grid;
   gap: 2rem;
   margin-top: 2rem;
 }
 
-#offerings > h3 {
-  margin-bottom: 24px;
-  grid-column: 1 / -1;
-  text-align: left;
-}
-
+/* Offering Card Styling */
 .offering-card {
   background: var(--olive-green);
   border-radius: 0.75rem;
   padding: 1.5rem;
+}
+
+#offerings > h3 {
+  margin-bottom: 24px;
+  grid-column: 1/-1; /* Make heading span full width */
+  text-align: left;
 }
 
 .offering-card h4 {
@@ -109,14 +167,45 @@ h3 {
   color: var(--soft-white);
 }
 
-.offering-card p,
-.offering-card ul {
+.offering-card p, .offering-card ul {
   font-size: 16px;
   line-height: 1;
   color: var(--soft-white);
 }
 
-/* --- GALLERY SECTION --- */
+/* Tablet breakpoint — two columns */
+@media (min-width: 600px) {
+  #offerings {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Third card spans full width */
+  #offerings .offering-card:nth-of-type(3) {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Desktop refinement */
+@media (min-width: 900px) {
+  #offerings {
+    gap: 3rem;
+  }
+
+  .offering-card {
+    padding: 2rem;
+  }
+}
+
+/* Large desktop refinement */
+@media (min-width: 1200px) {
+  #offerings {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* GALLERY */
 #gallery {
   max-width: 1100px;
   margin: 3em auto;
@@ -136,7 +225,7 @@ h3 {
   line-height: 1.7;
 }
 
-/* GALLERY GRID */
+/* GRID */
 .gallery-img {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -144,28 +233,34 @@ h3 {
   margin-bottom: 40px;
 }
 
-/* GALLERY CARD */
+/* added a card box style around image+caption */
 .gallery-card {
   background: var(--linen);
-  border: 1px solid var(--dark-charcoal);
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  height: auto;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.22);
 }
 
 .gallery-card img {
-  width: 100%;
-  border-radius: 8px;
+ width: 100%;
+ display: block;
+ border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .gallery-card figcaption {
-  margin-top: 16px;
   text-align: center;
   font-family: "Playfair Display", serif;
   font-size: 16px;
   line-height: 1.5;
   color: var(--dark-charcoal);
+  padding: 8px;
+}
+
+.gallery-img figure {
+  text-align: left;
 }
 
 /* BUTTON */
@@ -189,7 +284,7 @@ h3 {
   background: var(--olive-green-dark);
 }
 
-/* --- FOOTER --- */
+/* Footer Styles */
 footer {
   text-align: center;
   margin-top: 4rem;
@@ -210,37 +305,4 @@ footer .social a {
   text-decoration: none;
   color: #3a2f1b;
   font-weight: bold;
-}
-
-/* MEDIA QUERIES */
-
-/* Tablet */
-@media (min-width: 600px) {
-  #offerings {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  #offerings .offering-card:nth-of-type(3) {
-    grid-column: 1 / -1;
-  }
-}
-
-/* Desktop */
-@media (min-width: 900px) {
-  #offerings {
-    gap: 3rem;
-  }
-
-  .offering-card {
-    padding: 2rem;
-  }
-}
-
-/* XL Desktop */
-@media (min-width: 1200px) {
-  #offerings {
-    max-width: 1100px;
-    margin-left: auto;
-    margin-right: auto;
-  }
 }
