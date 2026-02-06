@@ -59,100 +59,178 @@ table {
 }
 
 /* Global Styles */
-body {
-  font-family: "playfair display", serif;
-  margin: 0;
-  padding: 0;
-  background: var(--soft-white);
-  color: var(--dark-charcoal);
-  line-height: 1.6;
-}
 
 /* Header Styles */
 header {
-  background: var(--midnight-blue);
-  color: var(--soft-white);
   text-align: center;
-  padding: 0 48px;
-  max-width: 900px;
-  margin: 0 auto;
+  padding: 3rem 0 2rem;
 }
 
 .logo {
-  background: var(--linen);
-  padding: 28px;
-  border-radius: 6px;
-  width: 160px;
-  margin: 0 auto 24px;
-  display: block;
+  width: 140px;
+  margin-bottom: 1rem;
 }
 
-h1 {
-  font-size: 38px;
-  margin: 5px 0 3px;
-  font-weight: 700;
-  color: var(--soft-white);
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.25rem;
 }
 
-h2 {
-  font-size: 19px;
-  font-style: italic;
-  margin: 0 0 24px;
-  color: var(--soft-white);
+header h2 {
+  font-size: 1.2rem;
+  font-weight: normal;
+  color: #6b5c3b;
 }
 
 /* Navigation Styles */
-nav {
-  background: var(--champagne-gold);
-  padding: 0 48px;
-  max-width: 900px;
-  margin: -56px auto 0;
-}
 nav ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 2rem;
   list-style: none;
-  padding: 16px 0;
-  margin: 0;
-}
-
-nav li {
-  flex: 1;
-  text-align: center;
+  margin: 2rem 0;
 }
 
 nav a {
   text-decoration: none;
-  color: var(--midnight-blue);
-  font-weight: 600;
-  display: block;
+  color: #3a2f1b;
+  font-weight: bold;
 }
 
-nav a:hover {
-  color: var(--olive-green);
-  text-decoration: underline;
-}
-
-/* Section Styles */
-section {
-  background: var(--linen);
-  padding: 32px 24px;
-  margin: 32px auto;
+/* Main Sections */
+main section {
+  margin: 4rem auto;
   max-width: 900px;
 }
 
-section h3 {
-  font-size: 30px;
+h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
   text-align: center;
-  margin-bottom: 16px;
-  color: var(--midnight-blue);
-  font-weight: 700;
 }
 
-section p {
-  font-size: 18px; /* 1.1rem → 18px */
-  max-width: 700px;
-  margin: 0 auto 24px; /* 1.5em → 24px */
+/* About Section */
+#about p {
+  font-size: 1.1rem;
+  margin-top: 1rem;
 }
 
-/* Offerings Section */
+/* Offerings — Grid Layout */
+
+#offerings {
+  display: grid;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Offering Card Styling */
+.offering-card {
+  background: var(--olive-green);
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+}
+
+#offerings > h3 {
+  margin-bottom: 24px;
+  grid-column: 1/-1; /* Make heading span full width */
+  text-align: left;
+}
+
+.offering-card h4 {
+  font-size: 24px;
+  margin-bottom: 0.75rem;
+  color: var(--soft-white);
+}
+
+.offering-card p, .offering-card ul {
+  font-size: 16px;
+  line-height: 1;
+  color: var(--soft-white);
+}
+
+/* Tablet breakpoint — two columns */
+@media (min-width: 600px) {
+  #offerings {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Third card spans full width */
+  #offerings .offering-card:nth-of-type(3) {
+    grid-column: 1 / -1;
+  }
+}
+
+/* Desktop refinement */
+@media (min-width: 900px) {
+  #offerings {
+    gap: 3rem;
+  }
+
+  .offering-card {
+    padding: 2rem;
+  }
+}
+
+/* Large desktop refinement */
+@media (min-width: 1200px) {
+  #offerings {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Gallery Grid */
+.gallery-img {
+  display: grid;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.gallery-img figure {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.gallery-img img {
+  width: 100%;
+  border-radius: 0.5rem;
+}
+
+/* Tablet gallery: 2 columns */
+@media (min-width: 600px) {
+  .gallery-img {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop gallery: 3 columns */
+@media (min-width: 900px) {
+  .gallery-img {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Footer Styles */
+footer {
+  text-align: center;
+  margin-top: 4rem;
+  padding: 2rem 0;
+  border-top: 2px solid #e2d6b8;
+}
+
+footer address p {
+  margin: 0.25rem 0;
+}
+
+footer .social {
+  margin-top: 1rem;
+}
+
+footer .social a {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #3a2f1b;
+  font-weight: bold;
+}
