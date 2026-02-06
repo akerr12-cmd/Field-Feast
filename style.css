@@ -152,7 +152,7 @@ h3 {
 
 
 /* ------------------------------------------------------ */
-/*  ABOUT SECTION (900px)                                 */
+/*  ABOUT SECTION (800px)                                 */
 /* ------------------------------------------------------ */
 #about {
   max-width: 900px;
@@ -340,7 +340,7 @@ footer .social a {
 /* ------------------------------------------------------ */
 
 /* TABLET — 600px */
-@media (max-width: 600px) {
+@media (min-width: 600px) {
 
   header,
   nav {
@@ -356,11 +356,6 @@ footer .social a {
   .gallery-img {
     grid-template-columns: repeat(2, 1fr);
     gap: 28px;
-  }
-
-  .inner-mobile {
-    max-width: 480px;
-    margin: 0 auto;
   }
 }
 
