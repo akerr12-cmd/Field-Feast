@@ -81,7 +81,7 @@ h1, h2, h3, h4, p, a, li {
 
 
 /* ------------------------------------------------------ */
-/*  HEADER (900px masthead)                               */
+/*  HEADER                              */
 /* ------------------------------------------------------ */
 header {
   display: flex;
@@ -141,8 +141,10 @@ nav a {
 /* ------------------------------------------------------ */
 /*  MAIN SECTIONS (content width: 800px)                  */
 /* ------------------------------------------------------ */
-main section {
+main{
   margin: auto;
+  padding-left: 16px;
+  padding-right: 16px;
 }
 
 h3 {
@@ -183,7 +185,9 @@ h3 {
 
   margin: 0 auto;
   padding-top: 40px;
+  padding-bottom: 24px;
   text-align: left;
+  border-bottom: 2px solid var(--champagne-gold);
 }
 
 #offerings > h3 {
@@ -240,11 +244,18 @@ h3 {
 #gallery {
   padding: 2rem 1rem;
   text-align: center;
+  border-bottom: 2px solid var(--champagne-gold);
 }
 
 #gallery h3 {
   font-size: 2.2rem;
   margin-bottom: 0.4em;
+  text-align: left;
+}
+
+#gallery p {
+  color: var(--dark-charcoal);
+  text-align: left;
 }
 
 .gallery-intro {
@@ -258,7 +269,6 @@ h3 {
   display: grid;
   grid-template-columns: 1fr;
   gap: 32px;
-  margin-bottom: 48px;
 }
 
 .gallery-card {
@@ -279,13 +289,13 @@ h3 {
 
 .gallery-card figure {
   margin: 0;
-  aspect-ratio: 3/4;
   overflow: hidden;
 }
 
 .gallery-card figcaption {
   text-align: center;
-  font-size: 18px;
+  font-size: clamp(18px, 2vw, 28px);
+
   line-height: 1.5;
   font-style: italic;
   font-weight: 500;
@@ -312,6 +322,7 @@ h3 {
   font-size: 1.1rem;
   font-weight: 600;
   padding: 12px 0;
+  margin-top: 16px;
   text-decoration: none;
   transition: background 0.3s ease;
 }
@@ -325,14 +336,25 @@ h3 {
 /*  FOOTER                                                */
 /* ------------------------------------------------------ */
 footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 48px 0;
+  margin-top: 24px;
+  background-color: var(--midnight-blue);
   text-align: center;
-  margin-top: 4rem;
-  padding: 2rem 0;
-  border-top: 2px solid #e2d6b8;
+  color: var(--soft-white);
 }
 
 footer address p {
   margin: 0.25rem 0;
+}
+
+footer address p a {
+  color: var(--champagne-gold);
+  text-decoration: none;
+  font-weight: bold;
 }
 
 footer .social {
@@ -342,7 +364,7 @@ footer .social {
 footer .social a {
   margin: 0 1rem;
   text-decoration: none;
-  color: #3a2f1b;
+  color: var(--champagne-gold);
   font-weight: bold;
 }
 
@@ -358,7 +380,7 @@ footer .social a {
     width: 250px;
   }
 
-  heaqder h1 {
+  header h1 {
     font-size: 72px;
   }   
   
@@ -379,7 +401,7 @@ footer .social a {
   .offering-card:nth-of-type(3) {
     grid-column: 1/-1;
   }
-}
+
 
 /* DESKTOP — 900px */
 @media (min-width: 900px) {
@@ -400,6 +422,11 @@ footer .social a {
   .gallery-img {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .gallery-card figcaption {
+    font-size: 20px;
+  }
+
 }
 
 /* XL DESKTOP — 1200px */
@@ -413,4 +440,6 @@ footer .social a {
   .gallery-img {
     grid-template-columns: repeat(5, 1fr);
   }
+
+
 }
