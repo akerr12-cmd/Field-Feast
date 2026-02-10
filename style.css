@@ -350,24 +350,12 @@ footer .social a {
     padding-right: 32px;
   }
 
-  #offerings {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-  }
-
   .gallery-img {
     grid-template-columns: repeat(2, 1fr);
     gap: 28px;
   }
-}
 
-/* LARGE TABLET — 700px */
-@media (min-width: 700px) {
-  .gallery-img {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .inner-offerings {
+    .inner-offerings {
     grid-template-columns: repeat(2, 1fr);
   }
 
@@ -394,7 +382,7 @@ footer .social a {
   }
 
   .gallery-img {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
