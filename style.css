@@ -84,24 +84,27 @@ h1, h2, h3, h4, p, a, li {
 /*  HEADER (900px masthead)                               */
 /* ------------------------------------------------------ */
 header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
+  padding-bottom: 24px;
   background-color: var(--midnight-blue);
-  padding: 24px 32px;
   text-align: center;
   color: var(--soft-white);
 }
 
 .logo {
-  width: 150px;
+  max-width: 100%;
+  width: 200px;
+  height: auto;
   margin: 0 auto 24px;
   display: block;
 }
 
 h1 {
   font-size: 56px;
-  margin: 8px 0 4px;
+  margin: 8px 0 16px;
 }
 
 h2 {
@@ -115,10 +118,9 @@ h2 {
 /* ------------------------------------------------------ */
 nav {
   width: 100%;
-  max-width: 900px;
   margin: 0 auto;
   background-color: var(--champagne-gold);
-  padding: 8px 32px;
+  padding: 16px 0;
   text-align: center;
 }
 
@@ -141,7 +143,6 @@ nav a {
 /* ------------------------------------------------------ */
 main section {
   margin: auto;
-  max-width: 800px;
 }
 
 h3 {
@@ -155,7 +156,6 @@ h3 {
 /*  ABOUT SECTION (800px)                                 */
 /* ------------------------------------------------------ */
 #about {
-  max-width: 900px;
   margin: 0 auto;
   padding-top: 40px;
   padding-bottom: 32px;
@@ -180,7 +180,7 @@ h3 {
 /*  OFFERINGS SECTION (800px)                             */
 /* ------------------------------------------------------ */
 #offerings {
-  max-width: 900px;
+
   margin: 0 auto;
   padding-top: 40px;
   text-align: left;
@@ -209,9 +209,10 @@ h3 {
 }
 
 .offering-card h4 {
-  font-size: 24px;
+  font-size: 28px;
   margin-bottom: 0.75rem;
   color: var(--soft-white);
+  font-weight: 700;
 }
 
 .offering-card p,
@@ -237,8 +238,6 @@ h3 {
 /*  GALLERY SECTION (800px)                               */
 /* ------------------------------------------------------ */
 #gallery {
-  max-width: 900px;
-  margin: 4rem auto;
   padding: 2rem 1rem;
   text-align: center;
 }
@@ -249,7 +248,6 @@ h3 {
 }
 
 .gallery-intro {
-  max-width: 750px;
   margin: 0 auto 3rem;
   font-size: 1.15rem;
   line-height: 1.7;
@@ -273,17 +271,26 @@ h3 {
 
 .gallery-card img {
   width: 100%;
+  height: auto;
   display: block;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
 
+.gallery-card figure {
+  margin: 0;
+  aspect-ratio: 3/4;
+  overflow: hidden;
+}
+
 .gallery-card figcaption {
   text-align: center;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.5;
+  font-style: italic;
+  font-weight: 500;
   color: var(--dark-charcoal);
-  padding: 8px;
+  padding: 16px;
 }
 
 
@@ -292,16 +299,19 @@ h3 {
 /* ------------------------------------------------------ */
 .gallery-button-wrapper {
   text-align: center;
+  width: 100%;
 }
 
 .gallery-button {
-  display: inline-block;
+  display: block;
+  width: 100%;
+  text-align: center;
   background: var(--olive-green);
   color: white;
-  padding: 0.9em 1.8em;
   border-radius: 6px;
   font-size: 1.1rem;
   font-weight: 600;
+  padding: 12px 0;
   text-decoration: none;
   transition: background 0.3s ease;
 }
@@ -344,10 +354,17 @@ footer .social a {
 /* TABLET — 600px */
 @media (min-width: 600px) {
 
-  header,
-  nav {
-    padding-left: 32px;
-    padding-right: 32px;
+  .logo {
+    width: 250px;
+  }
+
+  heaqder h1 {
+    font-size: 72px;
+  }   
+  
+ main {
+    padding-left: 48px;
+    padding-right: 48px;
   }
 
   .gallery-img {
@@ -367,10 +384,9 @@ footer .social a {
 /* DESKTOP — 900px */
 @media (min-width: 900px) {
 
-  header,
-  nav {
-    padding-left: 48px;
-    padding-right: 48px;
+  main {
+    padding-left: 96px;
+    padding-right: 96px;
   }
 
   #offerings {
@@ -388,6 +404,12 @@ footer .social a {
 
 /* XL DESKTOP — 1200px */
 @media (min-width: 1200px) {
+
+  main {
+    padding-left: 192px;
+    padding-right: 192px;
+  }
+
   .gallery-img {
     grid-template-columns: repeat(5, 1fr);
   }
