@@ -186,13 +186,13 @@ header {
 }
 
 header h1 {
-  font-size: 56px;
+  font-size: clamp(40px, 6vw, 72px);
   margin: 8px 0 16px;
   font-weight: 800;
 }
 
 header h2 {
-  font-size: 16px;
+  font-size: clamp(14px, 2vw, 16px);
   font-weight: 300;
 }
 
@@ -215,7 +215,7 @@ nav a {
   text-decoration: none;
   color: var(--dark-charcoal);
   font-weight: bold;
-  font-size: 24px;
+  font-size: clamp(18px, 3vw, 24px);
 }
 
 /* Main Sections */
@@ -227,7 +227,7 @@ main {
 }
 
 h3 {
-  font-size: 48px;
+  font-size: clamp(36px, 5vw, 48px);
   margin-bottom: 16px;
   text-align: center;
 }
@@ -244,11 +244,11 @@ h3 {
 #about h2 {
   text-align: left;
   color: var(--dark-charcoal);
-  font-size: 35px;
+  font-size: clamp(20px, 4vw, 35px);
 }
 
 #about p {
-  font-size: 16px;
+  font-size: clamp(10px, 2.2vw, 16px);
   margin-top: 16px;
   line-height: 1.6;
   color: var(--dark-charcoal);
@@ -266,7 +266,7 @@ h3 {
 #offerings > h3 {
   margin-bottom: 16px;
   text-align: left;
-  font-size: 35px;
+  font-size: clamp(20px, 4vw, 35px);
 }
 
 .inner-offerings {
@@ -296,7 +296,7 @@ h3 {
 }
 
 .offering-card h4 {
-  font-size: 35px;
+  font-size: clamp(16px, 4vw, 35px);
   margin-bottom: 12px;
   color: var(--soft-white);
   font-weight: 700;
@@ -304,7 +304,7 @@ h3 {
 
 .offering-card p,
 .offering-card ul {
-  font-size: 16px;
+  font-size: clamp(10px, 2.2vw, 16px);
   line-height: 1.4;
   color: var(--soft-white);
 }
@@ -325,7 +325,7 @@ h3 {
 }
 
 #gallery h3 {
-  font-size: 35px;
+  font-size: clamp(20px, 4vw, 35px);
   margin-bottom: 14px;
   text-align: left;
 }
@@ -333,11 +333,12 @@ h3 {
 #gallery p {
   color: var(--dark-charcoal);
   text-align: left;
+  font-size: clamp(10px, 2.2vw, 16px);
 }
 
 .gallery-intro {
   margin: 0 auto 48px;
-  font-size: 18px;
+  font-size: clamp(10px, 2.5vw, 18px);
   line-height: 1.7;
 }
 
@@ -370,7 +371,7 @@ h3 {
 
 .gallery-card figcaption {
   text-align: center;
-  font-size: clamp(18px, 2vw, 28px);
+  font-size: clamp(12px, 2vw, 28px);
   line-height: 1.5;
   font-style: italic;
   font-weight: 500;
@@ -391,7 +392,7 @@ h3 {
   background: var(--olive-green);
   color: white;
   border-radius: 6px;
-  font-size: 18px;
+  font-size: clamp(16px, 2vw, 18px);
   font-weight: 600;
   padding: 12px 0;
   margin-top: 16px;
@@ -419,6 +420,7 @@ footer {
 
 footer address p {
   margin: 4px 0;
+  font-size: clamp(10px, 2.2vw, 16px);
 }
 
 footer address p a {
@@ -444,10 +446,6 @@ footer .social a {
 @media (min-width: 600px) {
   .logo {
     width: 250px;
-  }
-
-  header h1 {
-    font-size: 72px;
   }
 
   main {
@@ -488,10 +486,6 @@ footer .social a {
 
   .gallery-img {
     grid-template-columns: repeat(3, 1fr);
-  }
-
-  .gallery-card figcaption {
-    font-size: 20px;
   }
 }
 
