@@ -1,13 +1,13 @@
-/* CSS By Amanda Kerr */
+/* CSS BY AMANDA KERR */
 
-
-/*  GOOGLE FONTS  */
-
+/* ------------------------------------------------------ */
+/*  IMPORTED FONTS                                        */
+/* ------------------------------------------------------ */
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap");
 
-
-/*  CSS RESET  */
-
+/* ------------------------------------------------------ */
+/*  CSS RESET                                             */
+/* ------------------------------------------------------ */
 html,
 body,
 div,
@@ -138,9 +138,9 @@ table {
   border-spacing: 0;
 }
 
-
-/*  ROOT VARIABLES  */
-
+/* ------------------------------------------------------ */
+/*  ROOT VARIABLES                                        */
+/* ------------------------------------------------------ */
 :root {
   --midnight-blue: #1f2a44;
   --olive-green: #76885b;
@@ -150,15 +150,22 @@ table {
   --soft-white: #faf9f6;
 }
 
+/* ------------------------------------------------------ */
+/*  GLOBAL STYLES (mobile first/small)                    */
+/* ------------------------------------------------------ */
 
-/*  GLOBAL TYPOGRAPHY */
-body {
+/* Global Typography */
+h1,
+h2,
+h3,
+h4,
+p,
+a,
+li {
   font-family: "Playfair Display", serif;
 }
 
-
-/*  HEADER  */
-
+/* Header */
 header {
   display: flex;
   flex-direction: column;
@@ -182,7 +189,6 @@ header h1 {
   font-size: 56px;
   margin: 8px 0 16px;
   font-weight: 800;
-  font-family: "Playfair Display", serif;
 }
 
 header h2 {
@@ -190,10 +196,7 @@ header h2 {
   font-weight: 300;
 }
 
-
-
-/*  NAVIGATION  */
-
+/* Navigation */
 nav {
   width: 100%;
   margin: 0 auto;
@@ -215,9 +218,7 @@ nav a {
   font-size: 24px;
 }
 
-
-/*  MAIN SECTIONS */
-
+/* Main Sections */
 main {
   margin: auto;
   padding-left: 16px;
@@ -231,7 +232,7 @@ h3 {
   text-align: center;
 }
 
-/*  ABOUT SECTION */
+/* About Section */
 #about {
   margin: 0 auto;
   padding-top: 40px;
@@ -253,9 +254,7 @@ h3 {
   color: var(--dark-charcoal);
 }
 
-
-/*  OFFERINGS SECTION */
-
+/* Offerings Section */
 #offerings {
   margin: 0 auto;
   padding-top: 40px;
@@ -310,8 +309,7 @@ h3 {
   color: var(--soft-white);
 }
 
-
-/*  GOLD DIVIDER  */
+/* Gold Divider */
 .section-divider-gold {
   width: 100%;
   height: 4px;
@@ -319,9 +317,7 @@ h3 {
   margin: 48px 0;
 }
 
-
-/*  GALLERY SECTION  */
-
+/* Gallery Section */
 #gallery {
   padding: 32px 16px;
   text-align: center;
@@ -345,7 +341,6 @@ h3 {
   line-height: 1.7;
 }
 
-/* Base: Mobile-first (1 column) */
 .gallery-img {
   display: grid;
   grid-template-columns: 1fr;
@@ -376,7 +371,6 @@ h3 {
 .gallery-card figcaption {
   text-align: center;
   font-size: clamp(18px, 2vw, 28px);
-
   line-height: 1.5;
   font-style: italic;
   font-weight: 500;
@@ -384,9 +378,7 @@ h3 {
   padding: 16px;
 }
 
-
-/*  BUTTON  */
-
+/* Button */
 .gallery-button-wrapper {
   text-align: center;
   width: 100%;
@@ -412,9 +404,7 @@ h3 {
   opacity: 0.9;
 }
 
-
-/*  FOOTER */
-
+/* Footer */
 footer {
   display: flex;
   flex-direction: column;
@@ -448,10 +438,9 @@ footer .social a {
   font-weight: bold;
 }
 
-
-/*  MEDIA QUERIES */
-
-/* TABLET — 600px */
+/* ------------------------------------------------------ */
+/*  MEDIA QUERY MEDIUM (600px)                            */
+/* ------------------------------------------------------ */
 @media (min-width: 600px) {
   .logo {
     width: 250px;
@@ -476,11 +465,13 @@ footer .social a {
   }
 
   .offering-card:nth-of-type(3) {
-    grid-column: 1/-1;
+    grid-column: 1 / -1;
   }
 }
 
-/* DESKTOP — 900px */
+/* ------------------------------------------------------ */
+/*  MEDIA QUERY LARGE (900px)                             */
+/* ------------------------------------------------------ */
 @media (min-width: 900px) {
   main {
     padding-left: 96px;
@@ -504,7 +495,9 @@ footer .social a {
   }
 }
 
-/* XL DESKTOP — 1200px */
+/* ------------------------------------------------------ */
+/*  MEDIA QUERY X-LARGE (1200px)                          */
+/* ------------------------------------------------------ */
 @media (min-width: 1200px) {
   main {
     padding-left: 192px;
