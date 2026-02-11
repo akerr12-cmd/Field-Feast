@@ -379,6 +379,10 @@ h3 {
   padding: 16px;
 }
 
+.gallery-card h4 {
+  display: none;
+}
+
 /* Button */
 .gallery-button-wrapper {
   text-align: center;
@@ -434,10 +438,14 @@ footer .social {
 }
 
 footer .social a {
-  margin: 0 16px;
+  margin: 0 4px;
   text-decoration: none;
   color: var(--champagne-gold);
   font-weight: bold;
+}
+
+footer h4 {
+  display: none;
 }
 
 /* ------------------------------------------------------ */
